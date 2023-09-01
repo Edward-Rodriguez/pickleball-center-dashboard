@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 html {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 *,
@@ -52,6 +55,7 @@ input[type='search'] {
   content: url(../img/icon_notification.svg);
   height: 48px;
   width: 48px;
+  margin-left: 48px;
 }
 
 span.avatar::before {
@@ -59,8 +63,14 @@ span.avatar::before {
   background-image: url(../img/avatar_cat.svg);
   background-size: 100% 100%;
   display: inline-block;
+  margin: 0px 16px;
   height: 48px;
   width: 48px;
+}
+
+.searchbar span.username {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 sidebar {
