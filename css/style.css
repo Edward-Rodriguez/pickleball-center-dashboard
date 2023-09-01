@@ -39,7 +39,7 @@ label[for='searchbox']::before {
 }
 
 input[type='search'] {
-  align-self: stretch;
+  align-self: center;
   border: none;
   outline: none;
   border-radius: 16px;
@@ -48,8 +48,17 @@ input[type='search'] {
   font-size: 1.2rem;
 }
 
-span.notification::before {
+.searchbar span.notification::before {
   content: url(../img/icon_notification.svg);
+  height: 48px;
+  width: 48px;
+}
+
+span.avatar::before {
+  content: '';
+  background-image: url(../img/avatar_cat.svg);
+  background-size: 100% 100%;
+  display: inline-block;
   height: 48px;
   width: 48px;
 }
