@@ -9,3 +9,58 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.page-container {
+  height: 100vh;
+  display: grid;
+  grid-template: min-content auto / 1fr 4fr;
+  grid-template-areas:
+    'aside header'
+    'aside main';
+}
+
+.header {
+  grid-area: header;
+}
+
+header > .searchbar {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-auto-flow: column;
+  padding: 16px;
+  align-items: center;
+  gap: 16px;
+}
+
+label[for='searchbox']::before {
+  content: url(../img/icon_search.svg);
+  height: 24px;
+  width: 24px;
+}
+
+input[type='search'] {
+  align-self: stretch;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background-color: rgba(239, 239, 239, 255);
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+span.notification::before {
+  content: url(../img/icon_notification.svg);
+  height: 48px;
+  width: 48px;
+}
+
+sidebar {
+  grid-area: aside;
+  background-color: #e63946;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  background-color: lightgrey;
+}
