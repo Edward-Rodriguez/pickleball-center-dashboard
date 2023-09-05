@@ -35,20 +35,6 @@ header > .searchbar {
   gap: 16px;
 }
 
-header > .searchbar span {
-  display: grid;
-  place-items: center;
-}
-
-label[for='searchbox']::before {
-  content: '';
-  background-image: url(../img/icon_search.svg);
-  background-image: 100% auto;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-}
-
 input[type='search'] {
   align-self: center;
   border: none;
@@ -57,16 +43,7 @@ input[type='search'] {
   background-color: rgba(239, 239, 239, 255);
   padding: 8px;
   font-size: 1rem;
-}
-
-.searchbar span.notification::before {
-  background-image: url(../img/icon_notification.svg);
-  content: '';
-  background-size: 100% 100%;
-  display: inline-block;
-  height: 28px;
-  width: 28px;
-  margin-left: 48px;
+  max-width: 600px;
 }
 
 .searchbar img.avatar {
