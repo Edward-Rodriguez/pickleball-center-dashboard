@@ -89,6 +89,26 @@ sidebar {
   grid-area: aside;
   background-color: #e63946;
   color: white;
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+  gap: 48px;
+}
+nav ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px;
+  padding: 16px;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 96px;
+  height: auto;
 }
 
 main {
