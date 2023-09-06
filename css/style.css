@@ -127,16 +127,34 @@ nav ul li {
 
 main {
   grid-area: main;
-  background-color: lightgrey;
+  background-color: #efefef;
   display: grid;
   grid-template: 1fr 1fr / 3fr 1fr;
   grid-template-areas:
     'main aside-top'
     'main aside-bottom';
+  padding: 32px 24px;
+  gap: 24px;
 }
 
 main .cards {
   grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+.cards > span.sub-title {
+  grid-column: 1 / -1;
+}
+
+.card {
+  background-color: white;
+  height: 300px;
+  border-left: 16px solid #a8dadc;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 main aside.announcements {
