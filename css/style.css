@@ -16,7 +16,8 @@ html {
 .page-container {
   height: 100vh;
   display: grid;
-  grid-template: min-content auto / minmax(min-content, 300px) auto;
+  /* grid-template: min-content auto / minmax(min-content, 300px) auto; */
+  grid-template: 200px auto / minmax(min-content, 300px) auto;
   grid-template-areas:
     'aside header'
     'aside main';
@@ -127,4 +128,26 @@ nav ul li {
 main {
   grid-area: main;
   background-color: lightgrey;
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-areas:
+    'main aside-top'
+    'main aside-bottom';
+}
+
+main artile {
+  grid-area: main;
+}
+
+main aside.announcements {
+  grid-area: aside-top;
+}
+
+main aside.trending {
+  grid-area: aside-bottom;
+}
+
+span.sub-title {
+  font-size: 1.2rem;
+  font-weight: 800;
 }
