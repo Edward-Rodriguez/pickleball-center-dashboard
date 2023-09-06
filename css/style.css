@@ -16,7 +16,7 @@ html {
 .page-container {
   height: 100vh;
   display: grid;
-  grid-template: min-content auto / 1fr 4fr;
+  grid-template: min-content auto / minmax(min-content, 300px) auto;
   grid-template-areas:
     'aside header'
     'aside main';
@@ -91,24 +91,37 @@ sidebar {
   color: white;
   display: grid;
   grid-template-rows: min-content min-content auto;
-  gap: 48px;
+  padding: 16px;
+  gap: 40px;
 }
 nav ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 8px;
-  padding: 16px;
-}
-
-nav ul li {
-  display: flex;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
   align-items: center;
 }
 
-#logo {
-  width: 96px;
+nav ul li {
+  cursor: pointer;
+}
+
+.logo-section {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+}
+
+#logo-img {
+  width: 48px;
   height: auto;
+}
+
+.icon {
+  justify-self: end;
 }
 
 main {
