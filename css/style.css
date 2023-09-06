@@ -135,7 +135,7 @@ main {
     'main aside-bottom';
 }
 
-main artile {
+main .cards {
   grid-area: main;
 }
 
@@ -148,6 +148,6 @@ main aside.trending {
 }
 
 span.sub-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 800;
 }
