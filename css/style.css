@@ -223,8 +223,8 @@ aside.aside-bottom {
   align-content: start;
   background-color: white;
   border-radius: 16px;
-  padding: 16px;
-  gap: 16px;
+  padding: 32px;
+  gap: 24px;
 }
 
 .trending > .card {
@@ -246,4 +246,5 @@ aside.aside-bottom {
 
 .trending > .card p {
   grid-area: heading;
+  font-size: 1.2rem;
 }
