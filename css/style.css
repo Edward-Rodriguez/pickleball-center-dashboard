@@ -16,7 +16,6 @@ html {
 .page-container {
   height: 100vh;
   display: grid;
-  /* grid-template: min-content auto / minmax(min-content, 300px) auto; */
   grid-template: 200px auto / minmax(min-content, 350px) auto;
   grid-template-areas:
     'aside header'
@@ -96,6 +95,7 @@ sidebar {
   padding: 32px 8px;
   gap: 96px;
 }
+
 nav ul {
   list-style-type: none;
   display: grid;
@@ -144,7 +144,12 @@ main {
   gap: 24px;
 }
 
-main .cards {
+span.sub-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+main .posts {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -152,27 +157,48 @@ main .cards {
   align-content: start;
 }
 
-.cards > span.sub-title {
+.posts > span.sub-title {
   grid-column: 1 / -1;
 }
 
-.card {
+.posts .card {
   background-color: white;
   height: 300px;
   border-left: 16px solid #a8dadc;
   border-radius: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   padding: 16px;
 }
 
-main aside.announcements {
-  grid-area: aside-top;
+main #aside-top {
+  display: grid;
+  grid-template-rows: min-content auto;
+  gap: 32px;
+}
+
+#aside-top > .subtitle {
+  grid-area: 1 /-1;
+}
+
+main aside > .announcements {
+  display: grid;
+  align-content: start;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 16px;
+}
+
+.announcements hr {
+  border: 1px solid #dfdfdf;
+  border-radius: 1px;
 }
 
 main aside.trending {
   grid-area: aside-bottom;
 }
 
-span.sub-title {
-  font-size: 1.3rem;
-  font-weight: 800;
+header > h3 {
+  padding-bottom: 8px;
 }
