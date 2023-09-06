@@ -136,12 +136,13 @@ main {
   grid-area: main;
   background-color: #efefef;
   display: grid;
-  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template: min-content auto / 3fr 1fr;
   grid-template-areas:
     'main aside-top'
     'main aside-bottom';
   padding: 32px 24px;
   gap: 24px;
+  align-content: start;
 }
 
 span.sub-title {
@@ -201,4 +202,48 @@ main aside.trending {
 
 header > h3 {
   padding-bottom: 8px;
+}
+
+.posts .card,
+.announcements,
+.trending {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 16px;
+}
+
+aside.aside-bottom {
+  display: grid;
+  grid-template-rows: min-content auto;
+  gap: 32px;
+}
+
+.trending {
+  display: grid;
+  align-content: start;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 16px;
+}
+
+.trending > .card {
+  display: grid;
+  grid-template: min-content auto / 64px auto;
+  grid-template-areas:
+    'avatar usertag'
+    'avatar heading';
+}
+
+.trending > .card img {
+  grid-area: avatar;
+  width: 48px;
+}
+
+.trending > .card h4 {
+  grid-area: usertag;
+}
+
+.trending > .card p {
+  grid-area: heading;
 }
