@@ -232,6 +232,7 @@ main aside.trending {
 
 aside.aside-bottom {
   grid-area: aside-bottom;
+  align-self: start;
   display: grid;
   grid-template-rows: min-content auto;
   gap: 32px;
