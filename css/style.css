@@ -172,6 +172,12 @@ main .posts {
   padding: 16px;
   display: grid;
   grid-template-rows: min-content auto min-content;
+  gap: 8px;
+}
+
+.posts .usertag {
+  opacity: 0.8;
+  font-size: 0.9rem;
 }
 
 .posts .card footer > .buttons {
@@ -212,10 +218,6 @@ main aside > .announcements {
 
 main aside.trending {
   grid-area: aside-bottom;
-}
-
-header > h3 {
-  padding-bottom: 8px;
 }
 
 .posts .card,
