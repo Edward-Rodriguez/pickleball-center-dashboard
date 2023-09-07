@@ -136,7 +136,8 @@ main {
   grid-area: main;
   background-color: #efefef;
   display: grid;
-  grid-template: min-content auto / 3fr 1fr;
+  grid-template-rows: min-content minmax(0, 1fr);
+  grid-template-columns: 3fr 1fr;
   grid-template-areas:
     'main aside-top'
     'main aside-bottom';
@@ -193,6 +194,7 @@ footer > .buttons button {
 }
 
 main #aside-top {
+  grid-area: aside-top;
   display: grid;
   grid-template-rows: min-content auto;
   gap: 32px;
@@ -229,6 +231,7 @@ main aside.trending {
 }
 
 aside.aside-bottom {
+  grid-area: aside-bottom;
   display: grid;
   grid-template-rows: min-content auto;
   gap: 32px;
