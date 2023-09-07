@@ -136,7 +136,7 @@ main {
   grid-area: main;
   background-color: #efefef;
   display: grid;
-  grid-template-rows: min-content minmax(0, 1fr);
+  grid-template-rows: min-content auto;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
     'main aside-top'
@@ -232,7 +232,6 @@ main aside.trending {
 
 aside.aside-bottom {
   grid-area: aside-bottom;
-  align-self: start;
   display: grid;
   grid-template-rows: min-content auto;
   gap: 32px;
@@ -243,7 +242,7 @@ aside.aside-bottom {
   align-content: start;
   background-color: white;
   border-radius: 16px;
-  padding: 32px;
+  padding: 16px;
   gap: 24px;
 }
 
@@ -267,4 +266,14 @@ aside.aside-bottom {
 .trending > .card p {
   grid-area: heading;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  main {
+    grid-template-rows: min-content minmax(0, 1fr);
+  }
+
+  aside.aside-bottom {
+    align-self: start;
+  }
 }
